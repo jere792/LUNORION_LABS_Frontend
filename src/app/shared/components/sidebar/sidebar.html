@@ -1,0 +1,13 @@
+<aside class="sidebar">
+  <h2>Mi Sidebar</h2>
+  <ul>
+    @for (item of items(); track item.route) {
+      <li>
+        <a [routerLink]="item.route">
+          <i [class]="item.icon"></i>
+          {{ item.label }}
+        </a>
+      </li>
+    }
+  </ul>
+</aside>

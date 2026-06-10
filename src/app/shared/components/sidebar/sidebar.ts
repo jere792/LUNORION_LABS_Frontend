@@ -1,22 +1,16 @@
 import { Component, input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { SidebarItem } from './sidebar-item.interface';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  template: `
-    <aside class="sidebar">
-      <h3>{{ title }}</h3>
-      <ul>
-        @for (item of items; track item.route){
-          <li>{{item.label}}</li>
-        }
-      </ul>
-    </aside>
-  `,
-  styles: ``,
+  imports: [CommonModule, RouterModule],
+  templateUrl: './sidebar.html',
+  styleUrls: ['./sidebar.scss']
 })
-export class Sidebar {
-  @Input() title = '';
-  @Input() items: { label: string; route: string }[] = [];
 
+export class Sidebar {
+  items = input<SidebarItem[]>([]);
 }
