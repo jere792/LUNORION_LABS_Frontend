@@ -2,23 +2,33 @@ import { Component } from '@angular/core';
 import { Sidebar } from './shared/components/sidebar/sidebar';
 import { TopNavbar } from './shared/components/top-navbar/top-navbar';
 import { Breadcrumb } from './shared/components/breadcrumb/breadcrumb';
+import { LoadingSpinner } from './shared/components/loading-spinner/loading-spinner';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar, TopNavbar, Breadcrumb],
+  imports: [Sidebar, TopNavbar, Breadcrumb, LoadingSpinner],
   template: `
   <div class="layout">
 
     <app-sidebar [items]="menu"></app-sidebar>
 
     <div class="main-content">
+
       <app-top-navbar
         [pageTitle]="'Dashboard'">
       </app-top-navbar>
+
       <app-breadcrumb
         [items]="['Inicio', 'Dashboard']">
       </app-breadcrumb>
+
+      <!-- <app-loading-spinner></app-loading-spinner> -->
+
+      <div class="content">
+        Contenido principal
+      </div>
+
     </div>
 
   </div>

@@ -2,14 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-loading-spinner',
-  imports: [],
-  template: `
-    <p>
-      loading-spinner works!
-    </p>
-  `,
-  styles: ``,
+  standalone: true,
+  templateUrl: './loading-spinner.html',
+  styleUrl: './loading-spinner.scss'
 })
+
 export class LoadingSpinner {
 
 }
