@@ -1,15 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-top-navbar',
-  imports: [],
-  template: `
-    <p>
-      top-navbar works!
-    </p>
-  `,
-  styles: ``,
+  standalone: true,
+  templateUrl: './top-navbar.html',
+  styleUrls: ['./top-navbar.scss']
 })
-export class TopNavbar {
 
+export class TopNavbar {
+  pageTitle = input('Dashboard');
 }
