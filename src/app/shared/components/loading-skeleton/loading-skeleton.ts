@@ -2,14 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-loading-skeleton',
-  imports: [],
-  template: `
-    <p>
-      loading-skeleton works!
-    </p>
-  `,
-  styles: ``,
+  standalone: true,
+  templateUrl: './loading-skeleton.html',
+  styleUrl: './loading-skeleton.scss'
 })
+
 export class LoadingSkeleton {
 
 }

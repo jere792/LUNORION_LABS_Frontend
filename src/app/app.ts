@@ -3,11 +3,12 @@ import { Sidebar } from './shared/components/sidebar/sidebar';
 import { TopNavbar } from './shared/components/top-navbar/top-navbar';
 import { Breadcrumb } from './shared/components/breadcrumb/breadcrumb';
 import { LoadingSpinner } from './shared/components/loading-spinner/loading-spinner';
+import { LoadingSkeleton } from './shared/components/loading-skeleton/loading-skeleton';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar, TopNavbar, Breadcrumb, LoadingSpinner],
+  imports: [Sidebar, TopNavbar, Breadcrumb, LoadingSpinner, LoadingSkeleton],
   template: `
   <div class="layout">
 
@@ -23,11 +24,9 @@ import { LoadingSpinner } from './shared/components/loading-spinner/loading-spin
         [items]="['Inicio', 'Dashboard']">
       </app-breadcrumb>
 
-      <!-- <app-loading-spinner></app-loading-spinner> -->
+      <app-loading-spinner></app-loading-spinner>
 
-      <div class="content">
-        Contenido principal
-      </div>
+      <app-loading-skeleton></app-loading-skeleton>
 
     </div>
 
