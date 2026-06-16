@@ -1,0 +1,8 @@
+<nav class="breadcrumb">
+  @for (item of items(); track $index) {
+    <span>{{ item }}</span>
+    @if (!$last) {
+      <span class="separator">/</span>
+    }
+  }
+</nav>

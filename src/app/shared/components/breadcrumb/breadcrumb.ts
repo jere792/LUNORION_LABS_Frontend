@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-breadcrumb',
-  imports: [],
-  template: `
-    <p>
-      breadcrumb works!
-    </p>
-  `,
-  styles: ``,
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './breadcrumb.html',
+  styleUrl: './breadcrumb.scss'
 })
-export class Breadcrumb {
 
+export class Breadcrumb {
+  items = input<string[]>([]);
 }

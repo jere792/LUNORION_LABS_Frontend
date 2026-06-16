@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Sidebar } from './shared/components/sidebar/sidebar';
 import { TopNavbar } from './shared/components/top-navbar/top-navbar';
+import { Breadcrumb } from './shared/components/breadcrumb/breadcrumb';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar, TopNavbar],
+  imports: [Sidebar, TopNavbar, Breadcrumb],
   template: `
   <div class="layout">
 
@@ -13,8 +14,11 @@ import { TopNavbar } from './shared/components/top-navbar/top-navbar';
 
     <div class="main-content">
       <app-top-navbar
-        [pageTitle]="'Dashboard'"
-      ></app-top-navbar>
+        [pageTitle]="'Dashboard'">
+      </app-top-navbar>
+      <app-breadcrumb
+        [items]="['Inicio', 'Dashboard']">
+      </app-breadcrumb>
     </div>
 
   </div>
