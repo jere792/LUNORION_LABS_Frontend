@@ -13,4 +13,5 @@ import { SidebarItem } from './sidebar-item.interface';
 
 export class Sidebar {
   items = input<SidebarItem[]>([]);
+  title = input('Lunorion Labs');
 }

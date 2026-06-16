@@ -3,5 +3,6 @@ export interface SidebarItem {
   icon: string;
   route: string;
   permission?: string;
+  disabled?: boolean;
   children?: SidebarItem[];
 }

@@ -1,9 +1,12 @@
+
 .sidebar {
   width: 260px;
   height: 100vh;
   background: #1f2937;
   color: white;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -25,6 +28,21 @@ a {
   border-radius: 8px;
 }
 
+a i {
+  width: 20px;
+  text-align: center;
+}
+
 a:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.active-link {
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
 }

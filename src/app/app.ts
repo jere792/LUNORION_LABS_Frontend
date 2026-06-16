@@ -22,6 +22,11 @@ export class App {
       route: '/customers',
     },
     {
+    label: 'Ventas',
+    icon: 'pi pi-shopping-cart',
+    route: '/sales'
+  },
+    {
       label: 'Vehículos',
       icon: 'pi pi-car',
       route: '/vehicles',
