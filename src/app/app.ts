@@ -4,11 +4,12 @@ import { TopNavbar } from './shared/components/top-navbar/top-navbar';
 import { Breadcrumb } from './shared/components/breadcrumb/breadcrumb';
 import { LoadingSpinner } from './shared/components/loading-spinner/loading-spinner';
 import { LoadingSkeleton } from './shared/components/loading-skeleton/loading-skeleton';
+import { ConfirmationDialog } from './shared/components/confirmation-dialog/confirmation-dialog';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Sidebar, TopNavbar, Breadcrumb, LoadingSpinner, LoadingSkeleton],
+  imports: [Sidebar, TopNavbar, Breadcrumb, LoadingSpinner, LoadingSkeleton, ConfirmationDialog],
   template: `
   <div class="layout">
 
@@ -27,6 +28,11 @@ import { LoadingSkeleton } from './shared/components/loading-skeleton/loading-sk
       <app-loading-spinner></app-loading-spinner>
 
       <app-loading-skeleton></app-loading-skeleton>
+
+      <app-confirmation-dialog
+        [title]="'Eliminar cliente'"
+        [message]="'¿Está seguro que desea eliminar este cliente?'">
+      </app-confirmation-dialog>
 
     </div>
 

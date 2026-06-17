@@ -1,0 +1,47 @@
+.dialog-backdrop {
+    font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.dialog {
+  width: 400px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.dialog h3 {
+  margin-bottom: 1rem;
+}
+
+.dialog p {
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background: #475569;
+  color: white;
+}
+
+.btn-confirm {
+  background: #ef4444;
+  color: white;
+}
