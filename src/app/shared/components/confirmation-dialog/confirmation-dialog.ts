@@ -8,6 +8,7 @@ import { Component, input, output } from '@angular/core';
 })
 
 export class ConfirmationDialog {
+  visible = input(true);
   title = input('Confirmacion');
   message = input('¿Desea continuar?');
   confirm = output<void>();
