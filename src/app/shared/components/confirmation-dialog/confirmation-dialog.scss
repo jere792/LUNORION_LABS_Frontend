@@ -6,24 +6,24 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  animation: fadeIn .2s ease;
+  animation: fadeIn 0.2s ease;
 }
 
 .dialog {
-    font-family: sans-serif;
+  font-family: sans-serif;
   width: 420px;
   background: #1f2937;
   color: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,.3);
-  animation: scaleIn .2s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: scaleIn 0.2s ease;
 }
 
 .dialog-header {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: 0.75rem;
   margin-bottom: 1rem;
 }
 
@@ -41,17 +41,17 @@
 .dialog-actions {
   display: flex;
   justify-content: flex-end;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
 .btn-cancel,
 .btn-confirm {
   border: none;
   border-radius: 8px;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .btn-cancel {
@@ -85,7 +85,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(.95);
+    transform: scale(0.95);
   }
 
   to {

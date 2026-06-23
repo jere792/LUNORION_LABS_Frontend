@@ -13,7 +13,12 @@ import { ConfirmationDialog } from './shared/components/confirmation-dialog/conf
   template: `
   <div class="layout">
 
-    <app-sidebar [items]="menu"></app-sidebar>
+    <app-sidebar
+      [items]="menu"
+      [title]="'SolveGrades'" 
+      [backgroundColor]="'#0f172a'"
+      [permissions]="['customers:view']">
+    </app-sidebar>
 
     <div class="main-content">
 
@@ -29,10 +34,8 @@ import { ConfirmationDialog } from './shared/components/confirmation-dialog/conf
 
       <app-loading-skeleton></app-loading-skeleton>
 
-      <app-confirmation-dialog
-        [title]="'Eliminar cliente'"
-        [message]="'¿Está seguro que desea eliminar este cliente?'">
-      </app-confirmation-dialog>
+      <!-- <app-confirmation-dialog>
+      </app-confirmation-dialog> -->
 
     </div>
 
@@ -56,21 +59,25 @@ export class App {
       label: 'Dashboard',
       icon: 'pi pi-home',
       route: '/dashboard',
+      permission: 'customers:view'
     },
     {
       label: 'Clientes',
       icon: 'pi pi-users',
       route: '/customers',
+      permission: 'customers:view'
     },
     {
       label: 'Ventas',
       icon: 'pi pi-shopping-cart',
-      route: '/sales'
+      route: '/sales',
+      permission: 'customers:view'
     },
     {
       label: 'Vehículos',
       icon: 'pi pi-car',
       route: '/vehicles',
+      permission: 'customers:view'
     },
   ];
 }
