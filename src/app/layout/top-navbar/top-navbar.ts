@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal} from '@angular/core';
 
 @Component({
   selector: 'app-top-navbar',
@@ -8,5 +8,18 @@ import { Component, input } from '@angular/core';
 })
 
 export class TopNavbar {
-  pageTitle = input('Dashboard');
+  backgroundColor = input('#1e293b');
+  userName = input('Pancito con palta');
+  userRole = input('ADMINISTRADOR');
+  notifications = input(0);
+  dropdownOpen = signal(false);
+
+  toggleDropdown() {
+    this.dropdownOpen.update(v => !v);
+  }
+
+  closeDropdown() {
+    this.dropdownOpen.set(false);
+  }
+
 }

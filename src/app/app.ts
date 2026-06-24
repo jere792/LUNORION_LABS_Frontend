@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Sidebar } from './shared/components/sidebar/sidebar';
-import { TopNavbar } from './shared/components/top-navbar/top-navbar';
-import { Breadcrumb } from './shared/components/breadcrumb/breadcrumb';
-import { LoadingSpinner } from './shared/components/loading-spinner/loading-spinner';
-import { LoadingSkeleton } from './shared/components/loading-skeleton/loading-skeleton';
-import { ConfirmationDialog } from './shared/components/confirmation-dialog/confirmation-dialog';
+import { Sidebar } from './layout/sidebar/sidebar';
+import { TopNavbar } from './layout/top-navbar/top-navbar';
+import { Breadcrumb } from './layout/breadcrumb/breadcrumb';
+import { LoadingSpinner } from './layout/loading-spinner/loading-spinner';
+import { LoadingSkeleton } from './layout/loading-skeleton/loading-skeleton';
+import { ConfirmationDialog } from './layout/confirmation-dialog/confirmation-dialog';
 
 @Component({
   selector: 'app-root',
@@ -15,27 +15,29 @@ import { ConfirmationDialog } from './shared/components/confirmation-dialog/conf
 
     <app-sidebar
       [items]="menu"
-      [title]="'SolveGrades'" 
-      [backgroundColor]="'#0f172a'"
+      [title]="'LurionLabs'" 
+      [backgroundColor]="'#1d2230'"
       [permissions]="['customers:view']">
     </app-sidebar>
 
     <div class="main-content">
-
       <app-top-navbar
-        [pageTitle]="'Dashboard'">
-      </app-top-navbar>
+        [backgroundColor]="'#27324b'"
+        [userName]="'Pan con Soledad'"
+        [userRole]="'Administrador'"
+        [notifications]="3">
 
-      <app-breadcrumb
-        [items]="['Inicio', 'Dashboard']">
-      </app-breadcrumb>
+        <app-breadcrumb
+          [items]="['Inicio', 'Clientes']">
+        </app-breadcrumb>
+
+      </app-top-navbar>
 
       <app-loading-spinner></app-loading-spinner>
 
       <app-loading-skeleton></app-loading-skeleton>
 
-      <!-- <app-confirmation-dialog>
-      </app-confirmation-dialog> -->
+      <!-- <app-confirmation-dialog></app-confirmation-dialog> -->
 
     </div>
 
