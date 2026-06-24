@@ -36,7 +36,11 @@ import { ConfirmationDialog } from './layout/confirmation-dialog/confirmation-di
 
       <app-loading-skeleton></app-loading-skeleton>
 
-      <!-- <app-confirmation-dialog></app-confirmation-dialog> -->
+      <app-confirmation-dialog
+        type="danger"
+        title="Eliminar cliente"
+        message="¿Está seguro que desea eliminar este cliente?">
+      </app-confirmation-dialog>
 
     </div>
 
@@ -88,7 +92,7 @@ export class App {
     },
     {
       label: 'Clientes',
-      route: '/customers'
+      route: '/'
     },
     {
       label: 'Detalle Cliente'
