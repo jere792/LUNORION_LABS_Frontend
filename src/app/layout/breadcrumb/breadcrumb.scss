@@ -2,20 +2,28 @@
   display: flex;
   align-items: center;
   gap: .5rem;
-  padding: 1rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   font-size: .9rem;
   color: #94a3b8;
+  font-family: sans-serif;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  transition: color .2s ease;
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  color: #ffffff;
+}
+
+.breadcrumb-current {
+  color: #ffffff;
+  font-weight: 600;
 }
 
 .separator {
   color: #64748b;
-}
-
-.breadcrumb span:last-child {
-  color: white;
-  font-weight: 600;
-}
-
-.content {
-  padding: 1.5rem;
+  font-size: .75rem;
 }

@@ -28,9 +28,8 @@ import { ConfirmationDialog } from './layout/confirmation-dialog/confirmation-di
         [notifications]="3">
 
         <app-breadcrumb
-          [items]="['Inicio', 'Clientes']">
+          [items]="breadcrumbItems">
         </app-breadcrumb>
-
       </app-top-navbar>
 
       <app-loading-spinner></app-loading-spinner>
@@ -81,5 +80,18 @@ export class App {
       route: '/vehicles',
       permission: 'customers:view'
     },
+  ];
+  breadcrumbItems = [
+    {
+      label: 'Inicio',
+      route: '/'
+    },
+    {
+      label: 'Clientes',
+      route: '/customers'
+    },
+    {
+      label: 'Detalle Cliente'
+    }
   ];
 }

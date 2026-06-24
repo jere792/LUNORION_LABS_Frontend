@@ -21,5 +21,4 @@ export class TopNavbar {
   closeDropdown() {
     this.dropdownOpen.set(false);
   }
-
 }
