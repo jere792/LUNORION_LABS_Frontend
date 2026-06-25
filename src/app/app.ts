@@ -32,15 +32,19 @@ import { ConfirmationDialog } from './layout/confirmation-dialog/confirmation-di
         </app-breadcrumb>
       </app-top-navbar>
 
-      <app-loading-spinner></app-loading-spinner>
+      <app-loading-spinner
+        type="lines"
+        color="#f59e0b"
+        [size]="50">
+      </app-loading-spinner>
 
       <app-loading-skeleton></app-loading-skeleton>
 
-      <app-confirmation-dialog
+      <!-- <app-confirmation-dialog
         type="danger"
         title="Eliminar cliente"
         message="¿Está seguro que desea eliminar este cliente?">
-      </app-confirmation-dialog>
+      </app-confirmation-dialog> -->
 
     </div>
 
