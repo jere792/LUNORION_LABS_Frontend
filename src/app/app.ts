@@ -38,7 +38,9 @@ import { ConfirmationDialog } from './layout/confirmation-dialog/confirmation-di
         [size]="50">
       </app-loading-spinner>
 
-      <app-loading-skeleton></app-loading-skeleton>
+      <app-loading-skeleton type="card"></app-loading-skeleton>
+      <app-loading-skeleton type="form"></app-loading-skeleton>
+      <app-loading-skeleton type="table"></app-loading-skeleton>  
 
       <!-- <app-confirmation-dialog
         type="danger"

@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+export type SkeletonType =
+  | 'card'
+  | 'table'
+  | 'form';
 
 @Component({
   selector: 'app-loading-skeleton',
@@ -8,5 +12,5 @@ import { Component } from '@angular/core';
 })
 
 export class LoadingSkeleton {
-
+  type = input<SkeletonType>('card');
 }
